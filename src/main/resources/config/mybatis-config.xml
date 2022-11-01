@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
+<!--<properties resource=""></properties>-->
     <settings>
 <!--        설정된 캐시를 전역적으로 사용할지 말지에 대한 여부-->
         <setting name="cacheEnabled" value="true"/>
@@ -23,9 +23,4 @@
         <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
     </settings>
 
-    <mappers>
-            <mapper resource="mappers/StudentMapper.xml"/>
-<!--        <mapper resource="mappers/DataMng/DataMngMapper.xml"/>-->
-<!--        <mapper resource="mappers/DataService/DataServiceMapper.xml"/>-->
-    </mappers>
 </configuration>
