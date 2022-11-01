@@ -1,4 +1,4 @@
-package com.java.student.config;
+package com.student.api.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +17,7 @@ public class SwaggerConfiguration {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(swaggerInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.student.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.student.api.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false); // 기본으로 세팅되는 200,401,403,404 메시지 표시 x
