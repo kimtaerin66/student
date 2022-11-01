@@ -1,5 +1,8 @@
+
+
+
 #=================================
-#        Server ??
+#        Server 설정
 #=================================
 server:
   port: 8080
@@ -7,20 +10,24 @@ server:
     include-exception: false
     whitelabel:
       enabled: true
+  connect-timeout: 3
+  read-timeout: 3
+  write-timeout: 3
 
 #=================================
-#        DB ??
+#        DB 설정
 #=================================
-    datasource:
+
+
+spring:
+  datasource:
       username: root
-      password: yeonji106
+      password: pass0001!
       db_schema: study
-      connect-timeout: 3
-      read-timeout: 3
-      write-timeout: 3
+      jdbc-url: jdbc:mariadb://127.0.0.1:3306/study?autoReconnect=true&serverTimezone=Asia/Seoul&useSSL=false&allowMultiQueries=true&useUnicode=ture&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&&allowMultiQueries=true
+      driver-class-name: org.mariadb.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
-      jdbc-url:
-      jdbc:mariadb://127.0.0.1:3306/study?autoReconnect=true&serverTimezone=Asia/Seoul&useSSL=false&allowMultiQueries=true&useUnicode=ture&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&&allowMultiQueries=true
-
-#spring.mvc.pathmatch.matching-strategy=ant_path_matcher
 
