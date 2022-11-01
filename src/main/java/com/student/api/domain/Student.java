@@ -1,4 +1,4 @@
-package com.java.student.domain;
+package com.student.api.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ public class Student {
     private int math;
     private int english;
     private int history;
-    private int avg;
+    private double avg;
     private int sum;
 
     public Student(int id, String name, int math, int korean, int english, int history, int avg) {

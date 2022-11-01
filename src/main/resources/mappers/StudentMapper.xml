@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.api.mappers.StudentMapper">
+
+
+    <!--    파일에서 학생정보 조회-->
+    <select id="_getDBStudentList" resultType="com.student.api.domain.StudentDTO$Response">
+        SELECT *
+        FROM student
+    </select>
+
+
+    <select id="_getDBStudentDetail" resultType="com.student.api.domain.StudentDTO$Response">
+        SELECT *
+        FROM STUDENT
+        WHERE ID = #{id}
+    </select>
+
+    <!--    학생정보 수정-->
+    <update id="_setDBStudentUpdate" >
+        UPDATE STUDENT
+        SET NAME          = #{name},
+            KOREAN        = #{korean},
+            MATH          = #{math},
+            ENGLISH       = #{english},
+            HISTORY       = #{history},
+            AVG           = #{avg},
+            SUM           = #{sum}
+        WHERE ID = #{id}
+    </update>
+
+</mapper>

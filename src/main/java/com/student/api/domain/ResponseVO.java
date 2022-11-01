@@ -1,4 +1,4 @@
-package com.java.student.domain;
+package com.student.api.domain;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -34,7 +34,7 @@ public class ResponseVO {
     }
 
     //ERROR
-    public void setErrorCode(Integer code, String message){
+    public void setErrorCode(Integer code){
         this.code= code;
         this.message = message;
     }
